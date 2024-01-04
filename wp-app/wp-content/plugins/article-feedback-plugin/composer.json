@@ -1,0 +1,17 @@
+{
+    "name": "imrekrisztian/article-voting-plugin",
+    "description": "This plugin is made for users who want to know how satisfied their readers are after reading their posts.",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    },
+    "authors": [
+        {
+            "name": "Krisztian Imre",
+            "email": "imre.krisztian@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
