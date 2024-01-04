@@ -13,6 +13,12 @@ After the voting, the user won't be able to vote again since the buttons remain 
 
 The site owners can see all the counts and percentages when they access the back-end side of the webpage. The results will be seen when clicking on Posts and editing an Article.
 
+![Frontend1](https://github.com/imrekrisztian/voting-plugin/assets/63724945/7ea30006-d26b-4a4b-9a2c-5b4d8a18dfca)
+
+![Frontend2](https://github.com/imrekrisztian/voting-plugin/assets/63724945/14ede9e0-55f5-4a2c-9c6a-60ccdaf4519a)
+
+![Backend](https://github.com/imrekrisztian/voting-plugin/assets/63724945/9546153c-e61f-46fb-a6a8-a7c1d309b82b)
+
 
 ## Installation
 
@@ -21,7 +27,8 @@ The site owners can see all the counts and percentages when they access the back
 - WordPress version 6.0 or higher
 - PHP version 8.0 or higher
 
-### Installation Steps
+### Installation Steps!
+
 
 1. Download the plugin from the WordPress plugin repository.
 2. Upload the plugin to your WordPress plugins directory.
