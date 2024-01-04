@@ -5,7 +5,7 @@ namespace Inc;
 class VotingHandler
 {
 
-    public function init()
+    public function init(): void
     {
         add_action('the_content', [$this, 'add_voting_area_to_post']);
         add_action('wp_ajax_custom_vote_action', [$this, 'handle_voting_ajax']);
@@ -19,15 +19,15 @@ class VotingHandler
      * @param string $content The original post content.
      * @return string The modified content with voting area.
      */
-    public function add_voting_area_to_post($content)
+    public function add_voting_area_to_post($content): string
     {
         if (!is_single()) {
             return $content;
         }
 
         global $post;
-        $userFingerprint = Utilities::getUserFingerprint();
-        $hasVoted = Utilities::checkIfUserHasVoted($post->ID, $userFingerprint);
+        $userFingerprint = Utilities::get_user_fingerprint();
+        $hasVoted = Utilities::check_if_user_has_voted($post->ID, $userFingerprint);
         $voting_numbers = Utilities::get_voting_numbers($post->ID);
 
         $disabled = '';
@@ -47,7 +47,7 @@ class VotingHandler
         }
 
         if (is_single()) {
-            $content .= $this->buildHtmlArea($articleText, $yesStatus, $disabled, $positive, $noStatus, $negative);
+            $content .= $this->build_html_area($articleText, $yesStatus, $disabled, $positive, $noStatus, $negative);
         }
 
         return $content;
@@ -58,7 +58,7 @@ class VotingHandler
      *
      * @return string The HTML content.
      */
-    public function buildHtmlArea(string $articleText, string $yesStatus, string $disabled, string $positive, string $noStatus, string $negative): string
+    public function build_html_area(string $articleText, string $yesStatus, string $disabled, string $positive, string $noStatus, string $negative): string
     {
         return sprintf(
             '<div class="article-vote-box">

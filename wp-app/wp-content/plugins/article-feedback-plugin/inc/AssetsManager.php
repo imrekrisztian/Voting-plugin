@@ -11,7 +11,7 @@ class AssetsManager
         $this->plugin_url = plugin_dir_url( dirname( __FILE__, 1 ) );
     }
 
-    public function init()
+    public function init(): void
     {
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
     }

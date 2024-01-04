@@ -9,7 +9,7 @@ class Utilities
      *
      * @return string The hashed IP address.
      */
-    public static function getUserFingerprint()
+    public static function get_user_fingerprint(): string
     {
         return md5($_SERVER['REMOTE_ADDR']);
     }
@@ -22,7 +22,7 @@ class Utilities
      * @param string $userFingerprint The user's fingerprint.
      * @return bool|string False if not voted, otherwise the vote type.
      */
-    public static function checkIfUserHasVoted($postId, $userFingerprint)
+    public static function check_if_user_has_voted($postId, $userFingerprint): bool|string
     {
         return get_post_meta($postId, 'voted_' . $userFingerprint, true);
     }

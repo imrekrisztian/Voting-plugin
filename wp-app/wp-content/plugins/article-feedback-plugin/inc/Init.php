@@ -5,7 +5,7 @@ namespace Inc;
 class Init
 {
 
-    public function init()
+    public function init(): void
     {
         $assetsManager = new AssetsManager();
         $votingHandler = new VotingHandler();
